@@ -7,7 +7,7 @@ class PokemonView:
         print("#"*23, "BEM VINDO AO POKEGOSHI", "#"*23)
         print("="*70)
         
-        nome_usuario = str(input("\nQual é o seu nome: ")).upper()
+        nome_usuario = str(input("\nQual é o seu nome: ")).capitalize()
         print()
         print("="*70)
         
@@ -60,17 +60,28 @@ class PokemonView:
         elif escolha_pokemon == "5":
             escolha_pokemon = "29"
 
-
-
         return escolha_pokemon
 
     def mascoteView(mascote):       
-        print('Você escolheu: ')
+        print('\nVocê escolheu: ')
         print(f'''
             Nome do Pokemon: {mascote._nome}
             ID do Pokemon: {mascote._id_pokemon}
             Altura: {mascote._altura}
             Peso: {mascote._peso}
             
-            Habilidades: {mascote._habilidades}''')
+            Habilidades: {mascote._habilidades}\n''')
         print("="*70)
+
+    def sucessoAdocao():
+        print('\nADOÇÃO CONCLUÍDA COM SUCESSO, SEU OVO ESTÁ CHOCANDO...')
+        print('''
+              ███╗
+             ██████╗
+            ████████╗
+            ████████║
+            ████████║
+            ╚█████╔╝
+             ╚════╝\n''')
+        print("="*70)
+        print()

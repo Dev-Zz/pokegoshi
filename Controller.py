@@ -1,15 +1,20 @@
 from Views import PokemonView
 from PokemonService import PokemonService
-from Models import Mascote
 
-escolha_usuario = PokemonView.menuUser(PokemonView)
+class Pokegoshi:
 
-if escolha_usuario == '1': 
-    escolha_pokemon = PokemonView.menuPokemon(PokemonView)
-elif escolha_usuario  == '2':
-    print('\nPrograma Encerrado\n')
-    print("="*70)
+    def game():
+        
+        escolha_usuario = PokemonView.menuUser(PokemonView)
 
-mascote = PokemonService.get_data(escolha_pokemon)
+        if escolha_usuario == '1': 
+            escolha_pokemon = PokemonView.menuPokemon(PokemonView)
+        elif escolha_usuario  == '2':
+            print('\nPrograma Encerrado\n')
+            print("="*70)
 
-PokemonView.mascoteView(mascote)
+        mascote = PokemonService.get_data(escolha_pokemon)
+
+        PokemonView.mascoteView(mascote)
+
+        PokemonView.sucessoAdocao()
